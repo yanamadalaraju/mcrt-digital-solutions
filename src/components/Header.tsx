@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -40,7 +39,6 @@ const Header = () => {
           <span className="ml-1 text-mcrt-teal font-medium">Digital Solutions</span>
         </Link>
         
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {menuItems.map((item) => (
             <Link
@@ -74,7 +72,7 @@ const Header = () => {
                       <Link
                         key={service.name}
                         to={service.path}
-                        className="block py-2 px-4 hover:bg-gray-50 rounded-md transition-colors"
+                        className="block py-2 px-4 hover:bg-mcrt-light hover:text-mcrt-blue rounded-md transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {service.name}
@@ -87,11 +85,10 @@ const Header = () => {
           </NavigationMenu>
           
           <Button asChild className="btn-primary">
-            <Link to="/contact">Get a Quote</Link>
+            <Link to="/quote">Get a Quote</Link>
           </Button>
         </nav>
         
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -103,7 +100,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav className="md:hidden bg-white py-4 px-6 shadow-lg absolute w-full">
           <div className="flex flex-col space-y-4">
@@ -122,7 +118,6 @@ const Header = () => {
               </Link>
             ))}
             
-            {/* Services Dropdown for Mobile */}
             <div className="space-y-2">
               <div className="font-medium text-gray-600">Services</div>
               {serviceItems.map((service) => (
@@ -138,7 +133,7 @@ const Header = () => {
             </div>
             
             <Button asChild className="btn-primary w-full">
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get a Quote</Link>
+              <Link to="/quote" onClick={() => setIsMenuOpen(false)}>Get a Quote</Link>
             </Button>
           </div>
         </nav>

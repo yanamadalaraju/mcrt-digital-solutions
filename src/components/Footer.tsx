@@ -48,18 +48,33 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">Services</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/services/tally-erp" className="hover:text-mcrt-teal transition-colors">
-                  Tally ERP Customization
+                <Link to="/services/tally-implementation" className="hover:text-mcrt-teal transition-colors">
+                  Tally Implementation
                 </Link>
               </li>
               <li>
-                <Link to="/services/mobile-app" className="hover:text-mcrt-teal transition-colors">
-                  Mobile App Development
+                <Link to="/services/tally-integration" className="hover:text-mcrt-teal transition-colors">
+                  Tally Integration
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-mcrt-teal transition-colors">
-                  Enterprise Solutions
+                <Link to="/services/tally-customization" className="hover:text-mcrt-teal transition-colors">
+                  Tally Customization
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/mobile-application" className="hover:text-mcrt-teal transition-colors">
+                  Mobile Application
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/tally-web" className="hover:text-mcrt-teal transition-colors">
+                  Tally on Web
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/web-applications" className="hover:text-mcrt-teal transition-colors">
+                  Web Applications
                 </Link>
               </li>
             </ul>
