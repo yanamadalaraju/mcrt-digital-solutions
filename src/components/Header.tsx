@@ -2,7 +2,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +18,16 @@ const Header = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
+  ];
+
+  const serviceItems = [
+    { name: "Tally Implementation", path: "/services/tally-implementation" },
+    { name: "Tally Integration", path: "/services/tally-integration" },
+    { name: "Tally Customization", path: "/services/tally-customization" },
+    { name: "Mobile Application", path: "/services/mobile-application" },
+    { name: "Tally on Web", path: "/services/tally-web" },
+    { name: "Web Applications", path: "/services/web-applications" },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -40,6 +55,37 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
+          
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  className={`text-base transition-colors hover:text-mcrt-blue ${
+                    location.pathname.includes("/services")
+                      ? "text-mcrt-blue font-medium"
+                      : "text-gray-600"
+                  }`}
+                >
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="p-4 w-64 bg-white">
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="block py-2 px-4 hover:bg-gray-50 rounded-md transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          
           <Button asChild className="btn-primary">
             <Link to="/contact">Get a Quote</Link>
           </Button>
@@ -52,11 +98,7 @@ const Header = () => {
             className="text-mcrt-dark focus:outline-none"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <X size={24} />
-            ) : (
-              <Menu size={24} />
-            )}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -79,7 +121,23 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="btn-primary w-full mt-4">
+            
+            {/* Services Dropdown for Mobile */}
+            <div className="space-y-2">
+              <div className="font-medium text-gray-600">Services</div>
+              {serviceItems.map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.path}
+                  className="block pl-4 py-1 text-gray-600 hover:text-mcrt-blue"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+            
+            <Button asChild className="btn-primary w-full">
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get a Quote</Link>
             </Button>
           </div>
