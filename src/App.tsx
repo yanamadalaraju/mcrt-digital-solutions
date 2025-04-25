@@ -36,6 +36,7 @@ const App = () => (
           <Route path="/services/mobile-application" element={<MobileAppPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/quote" element={<QuotePage />} />
+          <Route path="/services/tally-erp" element={<TallyCustomizationPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

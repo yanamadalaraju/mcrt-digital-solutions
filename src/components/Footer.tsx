@@ -86,15 +86,15 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>123 Business Avenue, Tech Park, Bangalore, India</span>
+                <span>No.660,1st Floor, 1st B, Main Road,Jayanagar 8 Block,BANGALORE - 560070</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 9964740243</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <span>contact@mcrtdigital.com</span>
+                <span>sales@mcrindia.in</span>
               </li>
             </ul>
           </div>

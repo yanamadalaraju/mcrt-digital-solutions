@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Logo from "./../assets/mcrlogo.jpg"; // adjust the path based on your project structure
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -34,10 +35,17 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container-custom flex justify-between items-center py-4">
-        <Link to="/" className="flex items-center">
+      <Link to="/" className="flex items-center">
+  <img src={Logo} alt="MCRT Logo" className="h-10 w-auto mr-2" />
+  <div className="flex flex-col">
+    {/* <span className="text-2xl font-bold text-mcrt-blue"></span>
+    <span className="text-sm text-mcrt-teal font-medium"></span> */}
+  </div>
+</Link>
+        {/* <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold text-mcrt-blue">MCRT</span>
           <span className="ml-1 text-mcrt-teal font-medium">Digital Solutions</span>
-        </Link>
+        </Link> */}
         
         <nav className="hidden md:flex space-x-8 items-center">
           {menuItems.map((item) => (

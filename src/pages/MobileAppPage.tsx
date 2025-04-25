@@ -160,8 +160,8 @@ const MobileAppPage = () => {
             {/* Timeline Items */}
             <div className="space-y-12 md:space-y-0">
               {/* Item 1 */}
-              <div className="flex flex-col md:flex-row md:items-center">
-                <div className="md:w-1/2 md:pr-8 text-right md:order-1">
+              <div className="flex flex-col md:flex-row md:items-center mt-12">
+                <div className="md:w-1/2 md:pr-8 text-right">
                   <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-mcrt-blue md:border-l-0 md:border-r-4">
                     <h3 className="text-xl font-bold mb-2">Discovery & Planning</h3>
                     <p className="text-gray-600">

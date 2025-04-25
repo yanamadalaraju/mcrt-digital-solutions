@@ -35,8 +35,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Our Location</h3>
-                    <p className="text-gray-600">123 Business Avenue, Tech Park</p>
-                    <p className="text-gray-600">Bangalore, Karnataka 560001, India</p>
+                    <p className="text-gray-600">No.660,1st Floor, 1st B, Main Road,Jayanagar 8 Block,</p>
+                    <p className="text-gray-600">BANGALORE - 560070 India</p>
                   </div>
                 </div>
                 
@@ -46,8 +46,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Email Us</h3>
-                    <p className="text-gray-600">contact@mcrtdigital.com</p>
-                    <p className="text-gray-600">support@mcrtdigital.com</p>
+                    <p className="text-gray-600">sales@mcrindia.in</p>
+                    {/* <p className="text-gray-600">support@mcrtdigital.com</p> */}
                   </div>
                 </div>
                 
@@ -57,8 +57,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Call Us</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
-                    <p className="text-gray-600">+91 98765 43211</p>
+                    <p className="text-gray-600">+91 9964740243</p>
+                    {/* <p className="text-gray-600">+91 98765 43211</p> */}
                   </div>
                 </div>
                 
